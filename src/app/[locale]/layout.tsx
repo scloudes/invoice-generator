@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
 import { LocaleProps } from "@/utils/metadata";
 import { getTranslations } from "next-intl/server";
 import { Outfit } from "next/font/google";
@@ -13,27 +14,34 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { locale } }: LocaleProps) {
-  const t = await getTranslations({ locale, namespace: "Home" });
+  const t = await getTranslations({ locale, namespace: "Home.Meta" });
 
   return {
-    title: t("Meta.title"),
-    description: t("Meta.desc"),
+    title: t("title"),
+    description: t("desc"),
   };
 }
 
 export default function LocaleLayout({ children, params: { locale } }: Props) {
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <head>
-        <meta name="author" content="Wastics" />
-        <meta name="copyright" content="Wastics" />
+        <meta name="author" content="scloudes" />
+        <meta name="copyright" content="scloudes" />
         <meta httpEquiv="content-language" content={locale} />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta lang={locale} />
       </head>
       <body className={font.className}>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );
