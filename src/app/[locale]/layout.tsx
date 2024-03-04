@@ -22,6 +22,8 @@ export async function generateMetadata({ params: { locale } }: LocaleProps) {
   };
 }
 
+export const revalidate = 3600;
+
 export default function LocaleLayout({ children, params: { locale } }: Props) {
   return (
     <html lang={locale} suppressHydrationWarning>
