@@ -6,7 +6,7 @@ type Props = {
 };
 
 export const metadata = {
-  title: { default: "Invoice Generator", template: `%s | Invoice Generator` },
+  metadataBase: new URL("https://invoicify-scloudes.vercel.app"),
   robots: {
     follow: true,
     index: true,
