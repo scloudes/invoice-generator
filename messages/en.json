@@ -1,4 +1,10 @@
 {
+  "LangSwitch": {
+    "current": "English",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  },
   "Home": {
     "Meta": {
       "title": "Invoicify by scloudes",
@@ -6,7 +12,7 @@
     },
     "Content": {
       "title": "Invoicify",
-      "subtitle": "Your Smart Companion for Effortless Invoicing"
+      "subtitle": "Effortless Invoicing, Made Easy"
     }
   }
 }

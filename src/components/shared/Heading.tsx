@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 interface Props extends React.HTMLProps<HTMLHeadingElement> {
   children: React.ReactNode;
@@ -7,13 +7,15 @@ interface Props extends React.HTMLProps<HTMLHeadingElement> {
 }
 
 const BASE_HEADING = "mb-4 font-bold";
+const GRADIENT_CLASSNAMES =
+  "text-transparent bg-clip-text bg-gradient-to-r from-primary-500 to-primary-400 dark:from-primary-400 dark:to-primary-300";
 
-const H1_VARIANT = "text-5xl md:text-6xl";
-const H2_VARIANT = "text-4xl md:text-5xl";
-const H3_VARIANT = "text-3xl md:text-4xl";
-const H4_VARIANT = "text-2xl md:text-3xl";
-const H5_VARIANT = "text-xl md:text-2xl";
-const H6_VARIANT = "text-lg md:text-xl";
+const H1_VARIANT = "text-7xl md:text-8xl";
+const H2_VARIANT = "text-6xl md:text-7xl";
+const H3_VARIANT = "text-5xl md:text-6xl";
+const H4_VARIANT = "text-4xl md:text-5xl";
+const H5_VARIANT = "text-3xl md:text-4xl";
+const H6_VARIANT = "text-2xl md:text-3xl";
 
 const VARIANTS = {
   h1: H1_VARIANT,
@@ -33,10 +35,10 @@ const Heading = ({
   const Component = component;
   return (
     <Component
-      className={twMerge(BASE_HEADING, VARIANTS[component], className)}
+      className={cn(BASE_HEADING, VARIANTS[component], className)}
       {...props}
     >
-      {children}
+      <span className={GRADIENT_CLASSNAMES}>{children}</span>
     </Component>
   );
 };

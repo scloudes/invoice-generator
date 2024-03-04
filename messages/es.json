@@ -1,4 +1,10 @@
 {
+  "LangSwitch":{
+    "current": "Español",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  },
   "Home": {
     "Meta": {
       "title": "Invoicify por scloudes",
@@ -6,7 +12,7 @@
     },
     "Content": {
       "title": "Invoicify",
-      "subtitle": "Tu compañero inteligente para facturación sin esfuerzo"
+      "subtitle": "Facturación sin esfuerzo, hecha fácil"
     }
   }
 }

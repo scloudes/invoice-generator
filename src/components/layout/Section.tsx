@@ -1,4 +1,4 @@
-import { twMerge } from "tailwind-merge";
+import { cn } from "@/lib/utils";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
 const Section = ({ children, className, ...props }: Props) => {
   return (
     <section
-      className={twMerge(`container mx-auto px-4 py-12`, className)}
+      className={cn(`container mx-auto px-4 py-8`, className)}
       {...props}
     >
       {children}

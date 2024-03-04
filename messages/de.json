@@ -1,4 +1,10 @@
 {
+  "LangSwitch":{
+    "current": "Deutsch",
+    "en": "English",
+    "es": "Español",
+    "de": "Deutsch"
+  },
   "Home": {
     "Meta": {
       "title": "Invoicify von scloudes",
@@ -6,7 +12,7 @@
     },
     "Content": {
       "title": "Invoicify",
-      "subtitle": "Dein smarter Begleiter für mühelose Abrechnungen"
+      "subtitle": "Mühelose Fakturierung, leicht gemacht"
     }
   }
 }

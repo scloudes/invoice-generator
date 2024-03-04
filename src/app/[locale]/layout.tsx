@@ -1,9 +1,9 @@
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
-import { LocaleProps } from "@/utils/metadata";
+import { LocaleProps } from "@/lib/metadata";
 import { getTranslations } from "next-intl/server";
-import { Outfit } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const font = Outfit({
+const font = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
 });
@@ -40,7 +40,7 @@ export default function LocaleLayout({ children, params: { locale } }: Props) {
           enableSystem
           disableTransitionOnChange
         >
-          <main>{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>
